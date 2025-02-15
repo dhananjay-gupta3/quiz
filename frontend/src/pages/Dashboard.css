@@ -1,0 +1,164 @@
+/* Base styles for the dashboard container */
+.dashboard-container {
+    padding: 2rem;
+    background-color: #f7fafc;
+    /* Light background color */
+    min-height: 100vh;
+}
+
+/* Styles for the dashboard heading */
+.dashboard-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+    /* Dark text color */
+}
+
+/* Styles for the "Add New Quiz" button */
+.add-quiz-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #48bb78;
+    /* Green background */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-quiz-button:hover {
+    background-color: #38a169;
+    /* Darker green on hover */
+}
+
+/* Styles for the quiz list */
+.quiz-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Styles for each quiz item */
+.quiz-item {
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    /* Light border color */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+/* Styles for quiz title and description */
+.quiz-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    /* Dark text color */
+}
+
+.quiz-content p {
+    margin-top: 0.5rem;
+    color: #718096;
+    /* Gray text color */
+}
+
+/* Styles for quiz action buttons */
+.quiz-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-button {
+    padding: 0.5rem 1rem;
+    background-color: #4299e1;
+    /* Blue background */
+    color: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #3182ce;
+    /* Darker blue on hover */
+}
+
+.delete-button {
+    padding: 0.5rem 1rem;
+    background-color: #f56565;
+    /* Red background */
+    color: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #e53e3e;
+    /* Darker red on hover */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 1rem;
+        /* Reduce padding on small screens */
+    }
+
+    .quiz-item {
+        flex-direction: column;
+        /* Stack quiz content and actions vertically */
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .quiz-actions {
+        width: 100%;
+        justify-content: flex-end;
+        /* Align buttons to the right */
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-heading {
+        font-size: 1.5rem;
+        /* Smaller heading on small screens */
+    }
+
+    .add-quiz-button {
+        width: 100%;
+        /* Full-width button on small screens */
+        text-align: center;
+    }
+
+    .quiz-content h3 {
+        font-size: 1rem;
+        /* Smaller title on small screens */
+    }
+
+    .quiz-content p {
+        font-size: 0.875rem;
+        /* Smaller description on small screens */
+    }
+
+    .edit-button,
+    .delete-button {
+        width: 100%;
+        /* Full-width buttons on small screens */
+        text-align: center;
+    }
+}
